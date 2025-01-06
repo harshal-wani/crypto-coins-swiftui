@@ -1,0 +1,15 @@
+{
+  "originHash" : "0bb0d4c9787a733b1f5508414cb0d09e39f461c4c92ae1098fbab54191e2305b",
+  "pins" : [
+    {
+      "identity" : "swiftuicustomtaglistview",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/chitomo12/SwiftUICustomTagListView.git",
+      "state" : {
+        "revision" : "29e2e54b76f140af1b5650ccd4051004d9166d70",
+        "version" : "0.4.0"
+      }
+    }
+  ],
+  "version" : 3
+}
