@@ -11,8 +11,10 @@ import SwiftUICustomTagListView
 // MARK: - Define your own component
 
 struct TagsView: View {
-  @Binding var data: TagViewItem
   
+  @Binding var data: TagViewItem
+  var onTagTap: (String, FilterAction) -> Void
+
   private let selectedTick = " ✅"
   
   var body: some View {
@@ -36,9 +38,13 @@ struct TagsView: View {
   }
   
   private func handleTap() {
-    print("[Pressed] \(data.text)")
     data.isSelected.toggle()
     updateText()
+    
+    let action: FilterAction = data.isSelected ? .add : .remove
+    let cleanTitle = data.text.replacingOccurrences(of: selectedTick, with: "")
+
+    onTagTap(cleanTitle, action)
   }
   
   private func updateText() {

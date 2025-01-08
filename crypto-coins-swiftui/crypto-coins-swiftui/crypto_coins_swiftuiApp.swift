@@ -11,7 +11,9 @@ import SwiftUI
 struct crypto_coins_swiftuiApp: App {
     var body: some Scene {
         WindowGroup {
-          CryptoListView()
+          let dp = CryptoDataProvider(apiService: APIService.shared)
+          let vm = CryptoViewModel(dataProvider: dp)
+          CryptoListView(viewModel: vm)
         }
     }
 }
