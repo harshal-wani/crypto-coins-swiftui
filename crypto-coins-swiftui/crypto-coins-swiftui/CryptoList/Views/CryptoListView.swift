@@ -34,6 +34,7 @@ struct CryptoListView: View {
           .padding(.leading, 16)
           .padding(.top, 16)
           .padding(.bottom, -30)
+          .background(Color.gray.opacity(0.3))
         List(viewModel.filteredCoins, id: \.self) { item in
           CryptoItemRow(cryptoItem: item)
         }
